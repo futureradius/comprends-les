@@ -5,6 +5,8 @@ export interface Settings {
   rate: number;
   hardBias: number;
   voiceName?: string;
+  /** Phone mode: one pair at a time, or the whole number at once. */
+  phoneStyle: "step" | "whole";
 }
 
 export interface Stats {
@@ -14,7 +16,7 @@ export interface Stats {
   perfect: number;
 }
 
-const DEFAULT_SETTINGS: Settings = { variant: "fr", rate: 0.9, hardBias: 0.4 };
+const DEFAULT_SETTINGS: Settings = { variant: "fr", rate: 0.9, hardBias: 0.4, phoneStyle: "step" };
 const DEFAULT_STATS: Stats = { misses: {}, attempts: 0, perfect: 0 };
 
 function load<T>(key: string, fallback: T): T {

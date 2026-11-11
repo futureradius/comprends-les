@@ -11,7 +11,7 @@ server.
 
 | Mode | Status |
 |---|---|
-| 📞 Phone numbers (spoken in pairs) | ✅ |
+| 📞 Phone numbers: step by step (one pair at a time) or the whole number | ✅ |
 | 💶 Money | planned |
 | 🚆 Railway announcements (train numbers, times, platforms) | planned |
 | 📐 Measurements (m, cm, m², scales like 1:50) | planned |

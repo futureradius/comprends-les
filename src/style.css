@@ -105,3 +105,44 @@ button, input, select { font: inherit; color: inherit; }
 .settings output { font-weight: 400; color: var(--muted); }
 .settings select { padding: 10px; border-radius: 10px; border: 1px solid var(--border); background: var(--bg); }
 .settings input[type="range"] { accent-color: var(--accent); }
+
+/* Phone mode: style switch */
+.segmented {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 4px; margin-bottom: 12px;
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+}
+.segmented button {
+  display: flex; flex-direction: column; align-items: center; gap: 0;
+  border: 0; border-radius: 10px; padding: 8px 6px; background: none; cursor: pointer; font-weight: 600;
+}
+.segmented button small { font-weight: 400; font-size: 0.75rem; color: var(--muted); }
+.segmented button[aria-selected="true"] { background: var(--accent); color: var(--accent-text); }
+.segmented button[aria-selected="true"] small { color: inherit; opacity: 0.85; }
+
+/* Step-by-step slots */
+.slots { display: flex; justify-content: center; gap: 6px; }
+.slot {
+  flex: 1; max-width: 72px; text-align: center; padding: 10px 0; border-radius: 10px;
+  font-size: 1.35rem; font-weight: 700; font-variant-numeric: tabular-nums;
+  background: var(--bg); color: var(--muted); border: 2px solid transparent;
+}
+.slot.current { border-color: var(--accent); color: var(--text); animation: pulse 1.6s ease-in-out infinite; }
+.slot.ok { background: var(--ok-bg); color: var(--ok); }
+.slot.retry { background: #fdf0d8; color: #9a5b00; }
+@media (prefers-color-scheme: dark) { .slot.retry { background: #3a2c12; color: #f2b25c; } }
+@keyframes pulse { 50% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 25%, transparent); } }
+
+.feedback { margin: 0; min-height: 2.9em; text-align: center; color: var(--muted); }
+.feedback.ok { color: var(--ok); }
+.feedback.ko { color: var(--ko); }
+.feedback em { font-style: normal; color: var(--text); }
+.grow { flex: 1; }
+.summary-actions { display: flex; gap: 10px; margin-top: 12px; }
+
+.shake { animation: shake 0.35s; border-color: var(--ko) !important; }
+@keyframes shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+@media (prefers-reduced-motion: reduce) { .slot.current, .shake { animation: none; } }
+.pair.retry { background: #fdf0d8; }
+.pair.retry .digits { color: #9a5b00; }
+@media (prefers-color-scheme: dark) { .pair.retry { background: #3a2c12; } .pair.retry .digits { color: #f2b25c; } }
+.feedback:empty, .slots[hidden] { display: none; }
