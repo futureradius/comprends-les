@@ -35,7 +35,7 @@ function h(html: string): HTMLElement {
 
 function renderHome() {
   app.replaceChildren(
-    h(`<header class="top"><h1>Entends les chiffres</h1>
+    h(`<header class="top"><h1>Comprends-les !</h1>
         <button class="icon-btn" id="open-settings" aria-label="Settings">⚙️</button></header>`),
     h(`<p class="lead">Pick a mode, listen, type what you hear.</p>`),
     h(`<div class="modes">${MODES.map(

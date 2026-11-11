@@ -1,6 +1,6 @@
 {
-  "name": "Entends les chiffres",
-  "short_name": "Chiffres",
+  "name": "Comprends-les !",
+  "short_name": "Comprends-les",
   "description": "Listening practice for French numbers",
   "start_url": "./",
   "scope": "./",

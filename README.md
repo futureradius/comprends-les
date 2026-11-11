@@ -1,4 +1,4 @@
-# Entends les chiffres 🇫🇷👂
+# Comprends-les ! 🇫🇷👂
 
 A tiny, offline-friendly app for practising **listening** to French numbers — especially the
 dreaded 70–99 (*soixante-dix-sept*, *quatre-vingt-dix-neuf*…).
