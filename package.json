@@ -1,0 +1,18 @@
+{
+  "name": "entends-les-chiffres",
+  "version": "0.1.0",
+  "description": "Listening practice for French numbers",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21",
+    "vitest": "^2.1.9"
+  },
+  "private": true,
+  "type": "module"
+}
